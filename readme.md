@@ -1,58 +1,6 @@
 # Project Memory Skill
 
-> Maintain persistent project-level memory across AI coding sessions — never lose context again.
-
----
-
-## What It Does
-
-Project Memory gives AI coding assistants a **persistent memory system** stored as markdown files in `.memory/` at the project root. It tracks:
-
-- **Session history** — one file per conversation turn, tagged and searchable
-- **Long-term knowledge** — architecture decisions, user preferences, conventions, patterns
-- **Working context** — active files, pending tasks, blockers, next steps
-
-This means after a break, the AI can recall exactly where you left off — what files you were editing, what decisions you made, what you were about to do next.
-
-## Core Capabilities
-
-| Capability | Description |
-|---|---|
-| Session Recall | At session start, reads index + context + knowledge, summarizes prior state |
-| Vibe Coding Mode | Every 3-5 turns, auto-saves working state for long iterative sessions |
-| Tag-Based Search | Sessions indexed with tags (`#auth`, `#bug`, `#decision`, `#vibe-coding`) |
-| Auto-Pruning | When >20 sessions, oldest 5 archived into knowledge and removed |
-| Template-Driven | Structured `.memory/` layout ensures consistency across sessions |
-| Privacy-Aware | Never stores API keys, passwords, tokens, or secrets |
-
-## Memory Layout
-
-```
-.memory/
-├── index.md                  # Session index with summaries and tags
-├── knowledge.md              # Long-term knowledge, decisions, preferences
-├── context.md                # Current working state snapshot
-└── sessions/
-    ├── 20260209-143022.md    # Per-turn session files
-    └── ...
-```
-
-## When to Use
-
-Add this skill to your AI coding tool (Claude Code, OpenCode, Cursor, etc.) when:
-
-- Working on multi-session, multi-turn development tasks
-- Doing "vibe coding" — iterative, conversational development
-- You want the AI to remember project conventions and decisions
-- You frequently switch between features and need context continuity
-- You need to recall "what did we decide about X?" across sessions
-
-## Quick Start
-
-1. Copy `project-memory/` into your AI tool's skills directory
-2. In your first session with a project, say: "Initialize project memory"
-3. The AI creates `.memory/` and starts tracking
-4. From then on, the AI reads memory at session start automatically
+[中文](#project-memory-skill项目记忆技能) | [English](#project-memory-skill-1)
 
 ---
 
@@ -110,4 +58,64 @@ Project Memory 为 AI 编程助手提供了一个**持久化记忆系统**，以
 1. 将 `project-memory/` 复制到你的 AI 工具 skills 目录
 2. 在项目的首个会话中说："初始化项目记忆"
 3. AI 会创建 `.memory/` 并开始追踪
-4. 此后，AI 会在此后每次会话启动时自动读取记忆
+4. 此后，AI 会在每次会话启动时自动读取记忆
+
+---
+
+# Project Memory Skill
+
+> Maintain persistent project-level memory across AI coding sessions — never lose context again.
+
+[↑ 回到顶部](#project-memory-skill项目记忆技能)
+
+---
+
+## What It Does
+
+Project Memory gives AI coding assistants a **persistent memory system** stored as markdown files in `.memory/` at the project root. It tracks:
+
+- **Session history** — one file per conversation turn, tagged and searchable
+- **Long-term knowledge** — architecture decisions, user preferences, conventions, patterns
+- **Working context** — active files, pending tasks, blockers, next steps
+
+This means after a break, the AI can recall exactly where you left off — what files you were editing, what decisions you made, what you were about to do next.
+
+## Core Capabilities
+
+| Capability | Description |
+|---|---|
+| Session Recall | At session start, reads index + context + knowledge, summarizes prior state |
+| Vibe Coding Mode | Every 3-5 turns, auto-saves working state for long iterative sessions |
+| Tag-Based Search | Sessions indexed with tags (`#auth`, `#bug`, `#decision`, `#vibe-coding`) |
+| Auto-Pruning | When >20 sessions, oldest 5 archived into knowledge and removed |
+| Template-Driven | Structured `.memory/` layout ensures consistency across sessions |
+| Privacy-Aware | Never stores API keys, passwords, tokens, or secrets |
+
+## Memory Layout
+
+```
+.memory/
+├── index.md                  # Session index with summaries and tags
+├── knowledge.md              # Long-term knowledge, decisions, preferences
+├── context.md                # Current working state snapshot
+└── sessions/
+    ├── 20260209-143022.md    # Per-turn session files
+    └── ...
+```
+
+## When to Use
+
+Add this skill to your AI coding tool (Claude Code, OpenCode, Cursor, etc.) when:
+
+- Working on multi-session, multi-turn development tasks
+- Doing "vibe coding" — iterative, conversational development
+- You want the AI to remember project conventions and decisions
+- You frequently switch between features and need context continuity
+- You need to recall "what did we decide about X?" across sessions
+
+## Quick Start
+
+1. Copy `project-memory/` into your AI tool's skills directory
+2. In your first session with a project, say: "Initialize project memory"
+3. The AI creates `.memory/` and starts tracking
+4. From then on, the AI reads memory at session start automatically
