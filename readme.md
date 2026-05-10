@@ -55,6 +55,14 @@ Project Memory 为 AI 编程助手提供了一个**持久化记忆系统**，以
 
 ## 快速开始
 
+**通过 npx 一键安装（推荐）：**
+
+```bash
+npx skills add edisoncgh/project-memory-skill
+```
+
+**手动安装：**
+
 1. 将 `project-memory/` 复制到你的 AI 工具 skills 目录
 2. 在项目的首个会话中说："初始化项目记忆"
 3. AI 会创建 `.memory/` 并开始追踪
@@ -66,7 +74,7 @@ Project Memory 为 AI 编程助手提供了一个**持久化记忆系统**，以
 
 > Maintain persistent project-level memory across AI coding sessions — never lose context again.
 
-[↑ 回到顶部](#project-memory-skill项目记忆技能)
+[Back to top](#project-memory-skill项目记忆技能)
 
 ---
 
@@ -114,6 +122,14 @@ Add this skill to your AI coding tool (Claude Code, OpenCode, Cursor, etc.) when
 - You need to recall "what did we decide about X?" across sessions
 
 ## Quick Start
+
+**One-click install via npx (recommended):**
+
+```bash
+npx skills add edisoncgh/project-memory-skill
+```
+
+**Manual install:**
 
 1. Copy `project-memory/` into your AI tool's skills directory
 2. In your first session with a project, say: "Initialize project memory"
